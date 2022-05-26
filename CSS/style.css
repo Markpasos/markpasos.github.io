@@ -449,11 +449,11 @@ img{
 .div > iframe{
     width: 300px;
 }
-.form{
+/*.form{
 
 }
 .contenedor-fieldset{
-}
+}*/
 .contenedor-div-inplab{
     display: flex;
     width: 250px;
