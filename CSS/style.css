@@ -65,6 +65,9 @@ img{
 .margin-top-1{
     margin-top: 1rem;
 }
+.margin-left-1{
+    margin-left: 1rem;
+}
 .padd-1{
     padding: 1rem;
 }
@@ -112,6 +115,7 @@ img{
     position: sticky;
     top:0;
     max-height: 12vh;
+    width: 100%;
     z-index: 1;
 }
 
@@ -333,13 +337,10 @@ img{
     background: linear-gradient(to top, white, 50%, #50942D);
 }
 .boton-carousel{
-    border:none;
     display:block;
     z-index: 3;
     padding: 8px 16px;
     overflow:hidden;
-    text-decoration:none;
-    color:#2a3781;
     background-color:inherit;
     text-align:center;
     cursor:pointer;
@@ -409,6 +410,7 @@ img{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    width: 100%;
 }
 .contenedor-footer-dir{
     display: flex;
@@ -439,6 +441,10 @@ img{
     border-color: green;
 }
 /*PÁGINA QUIENES SOMOS*/
+.contenedor-main-QS{
+    display:flex;
+    flex-direction: column;
+}
 .contenedor-img-QS{
     display: flex;
     flex-direction: row;
@@ -449,6 +455,16 @@ img{
 .div > iframe{
     width: 300px;
 }
+.contenedor-main-contacto{
+    display: flex;
+    flex-direction: column;
+    min-height: 88vh;
+}
+.div-radio{
+    display:flex;
+    flex-direction: row;
+
+}
 /*.form{
 
 }
@@ -456,6 +472,7 @@ img{
 }*/
 .contenedor-div-inplab{
     display: flex;
+    flex-direction: column;
     width: 250px;
 
 }
@@ -493,11 +510,20 @@ img{
     }
 }
 @media screen and (max-width: 915px){
+
     .contenedor-nav-h1{
         display: none;
     }
+
+    /*PAGINA QUIENES SOMOS*/
+
     .contenedor-img-QS{
-        display: none;
+        display: flex;
+        flex-direction: column;
+    }
+    .iframe-ubi{
+        width: 300px;
+        height: 250px;
     }
 
 }
