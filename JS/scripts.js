@@ -121,3 +121,43 @@ function carrouselDer(){
 }
 
 /*VALIDACIÓN DE FORMULARIO*/
+function validaForm(){
+    /*var nombreForm = document.getElementById("nombre");*/
+    var nombreForm = document.getElementsByName("name")[0];
+    /*var correoForm = document.getElementsByName("correo")[0].value;*/
+    var okValidacion = false;
+    if (nombreForm.value == ""){
+        alert("Verifique que el nombre esté escrito");
+        nombreForm.focus();
+        return false;
+    }
+    var correoForm = document.getElementsByName("correo")[0];
+    var formato = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if (correoForm.value.match(formato)){
+        correoForm.focus();
+    }
+    else{
+        alert("El correo electrónico ingresado no es válido");
+        correoForm.focus();
+        return false;
+    }
+    var msgForm = document.getElementsByName("mensaje")[0];
+    if (msgForm.value == ""){
+        alert("Por favor introduzca un mensaje para enviar su consulta.");
+        msgForm.focus();
+        return false;
+    }
+    var radioForm = document.getElementsByName("actividad");
+    
+    for (i = 0; i < 5; i++){
+        if (radioForm[i].checked == true){
+            console.log(radioForm[i].value);/*Verificar si elige el correcto*/
+            okValidacion = true;
+        }
+    }
+    console.log(radioForm);
+    if (okValidacion == true){
+        document.contacto.submit();
+    }   
+}
+
