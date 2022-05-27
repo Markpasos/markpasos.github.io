@@ -15,13 +15,13 @@
     <body>
         <header class="contenedor-header header-style">
             <nav class="contenedor-nav">
-                <img class= "img-nav" src="img/Logo club.png" alt="Logo club">
+                <a href="index.html"><img class= "img-nav" src="img/Logo club.png" alt="Logo club"></a>
                 <button id="navbar"  class="navbar" onclick="navTel()">
                     <span class=""></span>
                     <span class=""></span>
                     <span class=""></span>
                 </button>
-                <a class="btn borde" href="index.html"> <span> INICIO </span></a>
+                <!--<a class="btn borde" href="index.html"> <span> INICIO </span></a>-->
                 <a class="btn borde" href="nosotros.html"><span> NOSOTROS </span></a>
                 <a class="btn borde" href="actividades.html"> <span> ACTIVIDADES </span></a>
                 <a class="btn borde" href="contacto.html"><span> CONTACTO </span></a>
@@ -29,7 +29,7 @@
             <h1 class="contenedor-nav-h1 fw-900 letra-verde">FEDERACION CABALLITO</h1>
             <nav id="contenedor-nav-alt" class="contenedor-nav-alt">
                 <div class="contenedor-nav-alt-inside nav-cel-estilo">
-                    <img class= "contenedor-img-nav-cel" src="img/Logo club.png" alt="Logo club">
+                    <a href="index.html"><img class= "contenedor-img-nav-cel" src="img/Logo club.png" alt="Logo club"></a>
                     <a class="txt-dec-none margin-1 letra-blanca" href="nosotros.html"><span> NOSOTROS </span></a>
                     <a class="txt-dec-none margin-1 letra-blanca" href="actividades.html"> <span> ACTIVIDADES </span></a>
                     <a class="txt-dec-none margin-1 letra-blanca" href="contacto.html"><span> CONTACTO </span></a>
@@ -41,47 +41,46 @@
                 </div>
                 </nav>
         </header>  
-        <main class="contenedor-main">
+        <main class="contenedor-main-contacto">
             <h1 class="center letra-azul">CONTACTO</h1>
             <span class="center letra-azul margin-1">DEJANOS TU CONSULTA</span>
-            <form id="fs-frm" class="contenedor-flex-col center-100 form" action="https://formspree.io/f/xyyooevz" name="simple-contact-form" accept-charset="utf-8" method="post">
+            <form id="fs-frm" name="contacto" class="contenedor-flex-col center-100 form" action="https://formspree.io/f/xyyooevz" name="simple-contact-form" accept-charset="utf-8" method="post">
                     <label for="nombre" class="letra-azul margin-top-1">NOMBRE</label>
-                    <input type="text" class="width-250" name="name" id="nombre" placeholder="Nombre" required="">
+                    <input type="text" class="width-250" name="name" id="nombre" placeholder="Nombre" value="">
                     <label for="email-address" class="letra-azul margin-top-1">CORREO ELECTRÓNICO</label>
-                    <input type="email" class="width-250" name="_replyto" id="email-address" placeholder="email" required="">
-                    <fieldset class="margin-top-1 contenedor-fieldset ">
+                    <input type="email" class="width-250" name="correo" id="email-address" placeholder="email" value="">
+                    <fieldset class="margin-top-1 contenedor-fieldset " name="fieldset">
                             <div class="contenedor-div-inplab">
-                                <input class="" type="radio" name="actividad" id="act_volley">
-                                <label class="" for="">Volley</label>
-                            </div>
-                            <div class="contenedor-div-inplab">
-                                <input class="" type="radio" name="actividad" id="act_futbol">
-                                <label class="contenedor-label" for="">Futbol</label>
-                            </div>
-                            <div class="contenedor-div-inplab">
-                                <input class="" type="radio" name="actividad" id="act_parrilla">
-                                <label class="contenedor-label" for="">Parrilla</label>
-                            </div>
-                            <div class="contenedor-div-inplab">
-                                <input class="" type="radio" name="actividad" id="act_patinaje">
-                                <label class="contenedor-label" for="">Patinaje</label> 
-                            </div>
-                            <div class="contenedor-div-inplab">
-                                <input class="" type="radio" name="actividad" id="act_Taekwondo">
-                                <label class="contenedor-label" for="">Tae-Kwon-Do</label> 
+                                <div class="div-radio">
+                                    <input class="" type="radio" name="actividad" id="act_volley" value="Volley">
+                                    <label class="margin-left-1" for="">Volley</label>
+                                </div>
+                                <div class="div-radio">
+                                    <input class="" type="radio" name="actividad" id="act_futbol" value="Futbol">
+                                    <label class="margin-left-1" for="">Futbol</label>
+                                </div>
+                                <div class="div-radio">
+                                    <input class="" type="radio" name="actividad" id="act_parrilla" value="Parrilla">
+                                    <label class="margin-left-1" for="">Parrilla</label>
+                                </div>
+                                <div class="div-radio">
+                                    <input class="" type="radio" name="actividad" id="act_patinaje" value="Patinaje">
+                                    <label class="margin-left-1" for="">Patinaje</label>
+                                </div>
+                                <div class="div-radio">
+                                    <input class="" type="radio" name="actividad" id="act_Taekwondo" value="Taekwondo">
+                                    <label class="margin-left-1" for="">Tae Kwon Do</label>
+                                </div>                               
                             </div>   
                     </fieldset>
                     <label for="mensaje" class="letra-azul margin-top-1">CONSULTA</label>
-                    <textarea rows="7" name="mensaje" id="mensaje" class="width-250" placeholder="Mensaje" required=""></textarea>
+                    <textarea rows="7" name="mensaje" id="mensaje" class="width-250" placeholder="Mensaje"></textarea>
                     <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
                 </fieldset>
-                <input type="submit" value="Enviar">
-            </form>
-
-
+                <input type="button" onclick="validaForm()" value="Enviar">
             </form>
             <div class="center-100">
-                <iframe class="padd-1" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6565.984752562989!2d-58.434735365374046!3d-34.62963294618408!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca52e454d945%3A0x81542526e7984357!2sFederaci%C3%B3n%20Caballito!5e0!3m2!1ses!2sar!4v1653494250435!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" frameborder="0"></iframe>
+                <iframe class="padd-1 iframe-ubi" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6565.984752562989!2d-58.434735365374046!3d-34.62963294618408!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca52e454d945%3A0x81542526e7984357!2sFederaci%C3%B3n%20Caballito!5e0!3m2!1ses!2sar!4v1653494250435!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" frameborder="0"></iframe>
             </div>
         </main>
         <footer class="contenedor-footer fondo-verde">
@@ -93,7 +92,7 @@
                 <a target="_blank" href=""><img src="img/facebook-icon.png" alt="facebook-icon"></a>
                 <a target="_blank" href="https://www.google.com.ar/maps/place/Federaci%C3%B3n+Caballito/@-34.6283043,-58.4286092,17z/data=!4m5!3m4!1s0x95bcca52e454d945:0x81542526e7984357!8m2!3d-34.6289004!4d-58.4264678"><img src="img/icono-ubicacion.png" alt="icono-ubicacion"></a>
             </div>
-            <span class="registrado italic letra-blanca">Fedeción Caballito</span>
+            <span class="registrado italic letra-blanca">Federación Caballito</span>
         </footer>
         <script src="JS/scripts.js"></script>
     </body>
